@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Monitoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        p, ul, ol {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Flood Monitoring System Project</h1>
+
+        <!-- Button to view report PDF -->
+        <button onclick="window.open('https://drive.google.com/file/d/1OD1x52ukCjHSPqwIICG5hqhMeqJDxwqB/view?usp=drive_link', '_blank')">View Report</button>
+
+        <!-- Button to view project video -->
+        <button onclick="window.open('https://drive.google.com/file/d/1OEsGqX3c5XIWEo9pSzVz_N1R89NNzzCS/view?usp=drive_link', '_blank')">View Project Video</button>
+
+        <!-- Button to view project details -->
+        <button onclick="toggleContent('aboutProject')">About Project</button>
+
+        <!-- Content for About Project section -->
+        <div id="aboutProject" class="content">
+            <h2>AIM</h2>
+            <p>To build a prototype of an IoT system using Thingspeak cloud and Raspberry Pi and develop a Flood Monitoring System. The aim of the Flood Monitoring System project is to develop a real-time monitoring system using Raspberry Pi and various sensors to detect and alert against potential flooding conditions.</p>
+
+            <h2>Hardware Requirements</h2>
+            <ul>
+                <li>Raspberry Pi</li>
+                <li>Ultrasonic Sensor</li>
+                <li>Temperature Sensor</li>
+                <li>Rain Drop Sensor</li>
+                <li>Buzzer</li>
+                <li>LEDs</li>
+            </ul>
+
+            <h2>Software Requirements</h2>
+            <ul>
+                <li>Raspberry Pi</li>
+                <li>ThingSpeak Cloud</li>
+                <li>Android Studio</li>
+                <li>Python v3.7</li>
+            </ul>
+
+            <h2>Theory</h2>
+            <p>A flood monitoring system is designed to detect and monitor water levels, rainfall, and other environmental factors in areas prone to flooding. The system provides early warning alerts, aids in disaster management, and mitigates the impact of floods.</p>
+
+            <h2>ThingSpeak Overview</h2>
+            <p>ThingSpeak is an open-source IoT platform that stores and retrieves data from devices using HTTP or MQTT protocols. It provides data visualization and analysis tools with integrated MATLAB support.</p>
+
+
+            <h2>Algorithm</h2>
+            <ol>
+                <li>Power up the Raspberry Pi module and make connections as per the layout diagram.</li>
+                <li>Program the Raspberry Pi to sense distance, rain status, and humidity at regular intervals.</li>
+                <li>Create a ThingSpeak channel and generate an API key.</li>
+                <li>Upload sensed data to ThingSpeak, which is visualized in real-time.</li>
+                <li>Develop a Flutter-based web/app to visualize the project overview and sensor data.</li>
+            </ol>
+
+            <h2>RPi Code</h2>
+            <p>Sample code for the Flood Monitoring System is provided in the report and available in the GitHub repository.</p>
+
+            <h2>Conclusion</h2>
+            <p>A prototype of an IoT-based Flood Monitoring System using ThingSpeak and Raspberry Pi has been successfully developed, and real-time readings have been visualized through the system.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the content
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
